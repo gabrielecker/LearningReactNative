@@ -9,5 +9,13 @@ export const fetchPosts = () => {
   return {
     type: 'FETCH_POSTS',
     payload: request
-  }
+  };
+};
+
+export const fetchPost = (id) => {
+  const request = axios.get(`${BASE_URL}/posts/${id}`);
+  return {
+    type: 'FETCH_POST',
+    payload: request
+  };
 };
